@@ -1,5 +1,9 @@
 # PostgreSQL Installation Error Fix (Step-by-Step Guide)
 
+This is the error I encountered:
+
+![PostgreSQL installation error](./Pictures/error.png)
+
 ## 🧩 Overview
 I tried multiple ways to resolve this PostgreSQL installation error, but none worked.  
 However, I was finally able to **successfully install PostgreSQL using its ZIP version**, available on the official website.
@@ -55,6 +59,8 @@ Once inside the PostgreSQL console, create a new user with login and password:
 CREATE ROLE new_user WITH LOGIN PASSWORD 'new_password';
 ```
 
+![consola](./Pictures/pg.png)
+
 Exit the PostgreSQL console:
 ```bash
 \q
@@ -85,6 +91,10 @@ Connection → Host/Address: localhost
 Username: Your created user (e.g., new_user)
 
 Password: The password you set earlier.
+
+![PGG](./Pictures/pgadmin.png)
+![PGG](./Pictures/server.png)
+![consola](./Pictures/servername.png)
 
 
 ## ⚙️ Extra: Grant Privileges to Your User
