@@ -1,5 +1,7 @@
 # PostgreSQL Installation Error Fix (Step-by-Step Guide)
 
+## ⚠️ The Error
+
 This is the error I encountered:
 
 ![PostgreSQL installation error](./Pictures/error.png)
@@ -58,6 +60,8 @@ Once inside the PostgreSQL console, create a new user with login and password:
 ```bash
 CREATE ROLE new_user WITH LOGIN PASSWORD 'new_password';
 ```
+Example:
+If I set 'anonymous' as my user and '1234' as my password, it would look like this:
 
 ![consola](./Pictures/pg.png)
 
@@ -82,7 +86,14 @@ After installing:
 
 Open pgAdmin 4.
 
-Add a new server:
+Add a new server.
+
+You will see a pop-up like this:
+
+
+![PGG](./Pictures/pgadmin.png)
+![PGG](./Pictures/server.png)
+![consola](./Pictures/servername.png)
 
 Name: Choose any name you prefer.
 
@@ -92,9 +103,14 @@ Username: Your created user (e.g., new_user)
 
 Password: The password you set earlier.
 
-![PGG](./Pictures/pgadmin.png)
-![PGG](./Pictures/server.png)
-![consola](./Pictures/servername.png)
+
+In the 'Host/Address' field, enter the localhost. For 'Username' and 'Password', use the 
+credentials you created earlier in the command prompt. 
+ If everything is configured properly, you will see the following output in pgAdmin and 
+your command prompt.
+
+![PGGg](./Pictures/connection.png)
+![consolas](./Pictures/worked.png)
 
 
 ## ⚙️ Extra: Grant Privileges to Your User
